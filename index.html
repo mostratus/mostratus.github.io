@@ -38,9 +38,9 @@
     var year = dateObject.getFullYear();
     var month = dateObject.getMonth() + 1;
     var date = dateObject.getDate();
-    var current_hour = dateObject.getHour();
-    var current_min = dateObject.getMinutes();
-    var current_sec = dateObject.getSeconds();
+    var hour = dateObject.getHours();
+    var min = dateObject.getMinutes();
+    var sec = dateObject.getSeconds();
         
     importer.setOptions({
     target_file_name: "Labor Distribution Report for PD "  + month + "-" + date + "-" + year
@@ -54,7 +54,8 @@
         email: "sanjit@loopneighborhood.com"
     })  
     importer2.setOptions({
-    target_file_name: "audit "  + month + "-" + date + "-" + year + " " + current_hour + ":" + current_min + ":" + current_sec
+    target_file_name: "audit "  + month + "-" + date + "-" + year + " " + hour
+        // + ":" + current_min + ":" + current_sec
     })
         
     let importer3 = new CSVBoxImporter("PaR955BTLtBdVDKdBQBCkp1wLmPX7l",{}, callback);
