@@ -49,13 +49,13 @@
         
     let importer2 = new CSVBoxImporter("7vT2u9UQb8gJIBkGOGH3vBOMl15DrP",{}, callback);
     importer2.setUser({
-        user_id: "Stratus",
+        user_id: "audit "  + month + "-" + date + "-" + year,
         team_id: "Loop Neighborhood",
         email: "sanjit@loopneighborhood.com"
     })  
-    importer2.setOptions({
-    target_file_name: "audit "  + month + "-" + date + "-" + year + " " + hour + ":" + min + ":" + sec
-    })
+    // importer2.setOptions({
+    // target_file_name: "audit "  + month + "-" + date + "-" + year + " " + hour + ":" + min + ":" + sec
+    // })
         
     let importer3 = new CSVBoxImporter("PaR955BTLtBdVDKdBQBCkp1wLmPX7l",{}, callback);
     importer3.setUser({
