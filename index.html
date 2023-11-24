@@ -35,10 +35,10 @@
   <br><br>
 
 
-<button class="btn btn-primary" data-csvbox disabled onclick="importer.openModal();">test</button>
+<button class="btn btn-primary" data-csvbox disabled onclick="importers.openModal();">test</button>
 <script type="text/javascript" src="https://js.csvbox.io/script.js"></script>
 <script type="text/javascript">
-   function callback2(result, data) {
+   function callbacks(result, data) {
        if(result){
            console.log("Sheet uploaded successfully");
            console.log(data.row_success + " rows uploaded");
@@ -46,8 +46,8 @@
            console.log("There was some problem uploading the sheet");
        }
    }
-   let importer2 = new CSVBoxImporter("LclAg9oaHmH6pXgDWNO6TzmoSPFwqu",{}, callback2);
-   importer2.setUser({
+   let importers = new CSVBoxImporter("LclAg9oaHmH6pXgDWNO6TzmoSPFwqu",{}, callbacks);
+   importers.setUser({
        user_id: 'default123'
    });
 </script>
