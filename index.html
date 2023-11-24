@@ -43,7 +43,7 @@
     // var sec = dateobject.getSeconds();
         
     importer.setOptions({
-    target_file_name: "Labor Distribution Report for PD "  + month + "-" + date + "-" + year + $importer_id
+    target_file_name: "Labor Distribution Report for PD "  + month + "-" + date + "-" + year
         // + " " + hour + ":" + min + ":" + sec
     })
         
@@ -54,7 +54,8 @@
         email: "sanjit@loopneighborhood.com"
     })  
     importer2.setOptions({
-    target_file_name: "audit "  + month + "-" + date + "-" + year + " " + hour + ":" + min + ":" + sec
+    target_file_name: "audit "  + month + "-" + date + "-" + year + " " + $importer_id
+         // + hour + ":" + min + ":" + sec +
     })
         
     let importer3 = new CSVBoxImporter("PaR955BTLtBdVDKdBQBCkp1wLmPX7l",{}, callback);
