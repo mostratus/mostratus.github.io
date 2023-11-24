@@ -49,7 +49,7 @@
         email: "sanjit@loopneighborhood.com"
     })  
     importer2.setOptions({
-    target_file_name: "audit "  + month + "-" + date + "-" + year
+    target_file_name: data.original_filename //"audit "  + month + "-" + date + "-" + year
     })
         
     let importer3 = new CSVBoxImporter("PaR955BTLtBdVDKdBQBCkp1wLmPX7l",{}, callback);
