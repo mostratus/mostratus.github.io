@@ -20,6 +20,7 @@
 
     <script type="text/javascript" src="https://js.csvbox.io/script.js"></script>
     <script type="text/javascript">
+    var file_name;
     function callback(result, data) {
        if(result){
            console.log("Sheet uploaded successfully");
@@ -27,6 +28,7 @@
        }else{
            console.log("There was some problem uploading the sheet");
        }
+        file_name = data.original_filename;
     }
     let importer = new CSVBoxImporter("LclAg9oaHmH6pXgDWNO6TzmoSPFwqu",{}, callback);
     importer.setUser({
@@ -49,7 +51,7 @@
         email: "sanjit@loopneighborhood.com"
     })  
     importer2.setOptions({
-    target_file_name: data.original_filename //"audit "  + month + "-" + date + "-" + year
+    target_file_name: file_name //"audit "  + month + "-" + date + "-" + year
     })
         
     let importer3 = new CSVBoxImporter("PaR955BTLtBdVDKdBQBCkp1wLmPX7l",{}, callback);
