@@ -38,7 +38,7 @@
     var year = dateObject.getFullYear();
     var month = dateObject.getMonth() + 1;
     var date = dateObject.getDate();
-    // var hour = dateobject.getHours();
+    var current_hour = dateobject.getHours();
     // var min = dateobject.getMinutes();
     // var sec = dateobject.getSeconds();
         
@@ -54,7 +54,7 @@
         email: "sanjit@loopneighborhood.com"
     })  
     importer2.setOptions({
-    target_file_name: "audit "  + month + "-" + date + "-" + year + " " + $importer_id
+    target_file_name: "audit "  + month + "-" + date + "-" + year + " " + current_hour
          // + hour + ":" + min + ":" + sec +
     })
         
