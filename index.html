@@ -20,12 +20,10 @@
 
     <script type="text/javascript" src="https://js.csvbox.io/script.js"></script>
     <script type="text/javascript">
-    var original_file_name_from_data
     function callback(result, data) {
        if(result){
            console.log("Sheet uploaded successfully");
            console.log(data.row_success + " rows uploaded");
-           original_file_name_from_data = data.original_filename;
        }else{
            console.log("There was some problem uploading the sheet");
        }
@@ -40,8 +38,12 @@
     var year = dateObject.getFullYear();
     var month = dateObject.getMonth() + 1;
     var date = dateObject.getDate();
+    var hour = dateobject.getHours()
+    var min = dateobject.getMinutes()
+    var sec = dateobject.getSeconds()
+        
     importer.setOptions({
-    target_file_name: "Labor Distribution Report for PD "  + month + "-" + date + "-" + year
+    target_file_name: "Labor Distribution Report for PD "  + month + "-" + date + "-" + year + " " + hour + ":" + min + ":" + sec
     })
         
     let importer2 = new CSVBoxImporter("7vT2u9UQb8gJIBkGOGH3vBOMl15DrP",{}, callback);
@@ -51,7 +53,7 @@
         email: "sanjit@loopneighborhood.com"
     })  
     importer2.setOptions({
-    target_file_name: "audit "  + month + "-" + date + "-" + year + original_file_name_from_data
+    target_file_name: "audit "  + month + "-" + date + "-" + year + " " + hour + ":" + min + ":" + sec
     })
         
     let importer3 = new CSVBoxImporter("PaR955BTLtBdVDKdBQBCkp1wLmPX7l",{}, callback);
