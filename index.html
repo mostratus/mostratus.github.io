@@ -20,8 +20,9 @@
    importer.setUser({
        user_id: 'Labor Distribution Report for PD'
    })
+  Instant currentTimeStamp = Instant.now();
   importer.setOptions({
-    target_file_name: "Loop_" + {user_id}
+    target_file_name: currentTimeStamp
   })
 </script>
 
