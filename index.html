@@ -3,8 +3,13 @@
   <title>Loop CSV File uploader</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<!-- <body> -->
-<body background=url("https://www.loopneighborhood.com/wp-content/uploads/2022/08/image-1.png")> 
+<body>
+  <script>
+    var imageUrl = 'https://www.loopneighborhood.com/wp-content/uploads/2022/08/image-1.png';
+    // Get the body element
+    var body = document.body;
+    body.style.backgroundImage = 'url(' + imageUrl + ')';
+</script>
 <button class="btn btn-primary" data-csvbox disabled onclick="importer.openModal();">Import Payroll CSV</button>
 <script type="text/javascript" src="https://js.csvbox.io/script.js"></script>
 <script type="text/javascript">
