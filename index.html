@@ -6,6 +6,12 @@
 <body>
     <h1 style="text-align: center;">Loop Neighborhood CSV file Uploader</h1>
     <p style="text-align: center;"><strong>Please click on each button to upload the corresponding CSV file</strong></p>
+    <p id="body_text"></p>
+        <script>
+        let text = "Please make sure to complete the 'File Upload,' 'Select Header Row,' 'Map Columns,' 'Verify Data,' and 'Submit' steps to successfully upload the file to the SFTP server.";
+        let redcolored_text = text.fontcolor("red");
+        document.getElementById("body_text").innerHTML = redcolored_text;
+        </script>
 
     <br><br>
     
