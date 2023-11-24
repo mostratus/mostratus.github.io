@@ -20,7 +20,8 @@
    importer.setUser({
        user_id: 'Labor Distribution Report for PD'
    })
-  Instant currentTimeStamp = Instant.now();
+  LocalDateTime dateTime = LocalDateTime.now();
+  String currentTimeStamp = DateTimeFormatter.ofPattern("yyyy/MM/dd; HH:mm").format(dateTime);
   importer.setOptions({
     target_file_name: currentTimeStamp
   })
