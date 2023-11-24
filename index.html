@@ -1,47 +1,66 @@
 <html>
 <head>
-  <title>Loop CSV File uploader</title>
-  <link rel="stylesheet" href="style.css">
+    <title>Loop CSV File uploader</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body style="background-image: url('https://www.loopneighborhood.com/wp-content/uploads/2022/09/Image-Mask-2.png')">
-  <h1>Loop</h1>
-  <p1><strong>Please click on each button to upload the corresponding CSV file</strong></p1>
-<br>
-<button class="btn btn-primary" data-csvbox disabled onclick="importer.openModal();" style="background-color: rgb(255,213,128); height: 50px; width: 200px"><strong>Import Payroll CSV</strong></button>
-<br><br>  
-<button class="btn btn-primary" data-csvbox onclick="importers.openModal();" style="background-color: rgb(255,213,128); height: 50px; width: 200px"><strong>test</strong></button>
-<script type="text/javascript" src="https://js.csvbox.io/script.js"></script>
-<script type="text/javascript">
-   function callback(result, data) {
+    <h1>Loop</h1>
+    <p1><strong>Please click on each button to upload the corresponding CSV file</strong></p1>
+    <br>
+
+    <button class="btn btn-primary" data-csvbox disabled onclick="importer.openModal();" style="background-color: rgb(255,213,128); height: 50px; width: 200px"><strong>Import Payroll CSV</strong></button>
+
+    <br><br>  
+
+    <button class="btn btn-primary" data-csvbox onclick="importer2.openModal();" style="background-color: rgb(255,213,128); height: 50px; width: 200px"><strong>Import Fuel Price Report (Test)</strong></button>
+    
+    <br><br>  
+
+    <button class="btn btn-primary" data-csvbox onclick="importer3.openModal();" style="background-color: rgb(255,213,128); height: 50px; width: 200px"><strong>test</strong></button>
+
+    <script type="text/javascript" src="https://js.csvbox.io/script.js"></script>
+    <script type="text/javascript">
+    function callback(result, data) {
        if(result){
            console.log("Sheet uploaded successfully");
            console.log(data.row_success + " rows uploaded");
        }else{
            console.log("There was some problem uploading the sheet");
        }
-   }
-   let importer = new CSVBoxImporter("LclAg9oaHmH6pXgDWNO6TzmoSPFwqu",{}, callback);
-   importer.setUser({
+    }
+    let importer = new CSVBoxImporter("LclAg9oaHmH6pXgDWNO6TzmoSPFwqu",{}, callback);
+    importer.setUser({
         user_id: "Stratus",
         team_id: "Loop Neighborhood",
         email: "sanjit@loopneighborhood.com"
     })
-  var dateObject = new Date();
-  var year = dateObject.getFullYear();
-  var month = dateObject.getMonth() + 1;
-  var date = dateObject.getDate();
-  importer.setOptions({
+    var dateObject = new Date();
+    var year = dateObject.getFullYear();
+    var month = dateObject.getMonth() + 1;
+    var date = dateObject.getDate();
+    importer.setOptions({
     target_file_name: "Labor Distribution Report for PD "  + month + "-" + date + "-" + year
-  })
-  let importers = new CSVBoxImporter("PaR955BTLtBdVDKdBQBCkp1wLmPX7l",{}, callback);
-   importers.setUser({
+    })
+        
+    let importer2 = new CSVBoxImporter("7vT2u9UQb8gJIBkGOGH3vBOMl15DrP",{}, callback);
+    importer3.setUser({
         user_id: "Stratus",
         team_id: "Loop Neighborhood",
         email: "sanjit@loopneighborhood.com"
-   })  
-  importers.setOptions({
+    })  
+    importers.setOptions({
+    target_file_name: "audit "  + month + "-" + date + "-" + year
+    })
+        
+    let importer3 = new CSVBoxImporter("PaR955BTLtBdVDKdBQBCkp1wLmPX7l",{}, callback);
+    importer3.setUser({
+        user_id: "Stratus",
+        team_id: "Loop Neighborhood",
+        email: "sanjit@loopneighborhood.com"
+    })  
+    importers.setOptions({
     target_file_name: "Test "  + month + "-" + date + "-" + year
-  })
+    })
 </script>
 
 
