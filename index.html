@@ -19,17 +19,15 @@
    let importer = new CSVBoxImporter("PaR955BTLtBdVDKdBQBCkp1wLmPX7l",{}, callback);
    importer.setUser({
         user_id: "Stratus",
-        // team_id: "Loop Neighborhood",
-        // email: "sanjit@loopneighborhood.com"
+        team_id: "Loop Neighborhood",
+        email: "sanjit@loopneighborhood.com"
     })
-   })
   var dateObject = new Date();
   var year = dateObject.getFullYear();
   var month = dateObject.getMonth();
   var date = dateObject.getDate();
   importer.setOptions({
-    target_file_name: "Labor Distribution Report for PD " + year
-      // + "-" + month + "-" + date
+    target_file_name: "Labor Distribution Report for PD " + year + "-" + month + "-" + date
   })
 </script>
 
