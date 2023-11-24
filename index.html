@@ -18,10 +18,11 @@
    }
    let importer = new CSVBoxImporter("PaR955BTLtBdVDKdBQBCkp1wLmPX7l",{}, callback);
    importer.setUser({
-       user_id: 'Labor Distribution Report for PD'
+       user_id: "Labor Distribution Report for PD"
    })
+  var dt = new Date(); 
   importer.setOptions({
-    target_file_name: user_id
+    target_file_name: dt.toLocaleTimeString()
   })
 </script>
 
