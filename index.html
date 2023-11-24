@@ -20,10 +20,6 @@
            console.log("There was some problem uploading the sheet");
        }
    }
-  let importers = new CSVBoxImporter("PaR955BTLtBdVDKdBQBCkp1wLmPX7l",{}, callback);
-   importers.setUser({
-       user_id: 'default123'
-   })  
    let importer = new CSVBoxImporter("LclAg9oaHmH6pXgDWNO6TzmoSPFwqu",{}, callback);
    importer.setUser({
         user_id: "Stratus",
@@ -35,9 +31,17 @@
   var month = dateObject.getMonth() + 1;
   var date = dateObject.getDate();
   importer.setOptions({
-    target_file_name: "Labor Distribution Report for PD " + year + "-" + month + "-" + date
+    target_file_name: "Labor Distribution Report for PD "  + month + "-" + date + "-" + year
   })
-
+  let importers = new CSVBoxImporter("PaR955BTLtBdVDKdBQBCkp1wLmPX7l",{}, callback);
+   importers.setUser({
+        user_id: "Stratus",
+        team_id: "Loop Neighborhood",
+        email: "sanjit@loopneighborhood.com"
+   })  
+  importers.setOptions({
+    target_file_name: "Test "  + month + "-" + date + "-" + year
+  })
 </script>
 
 
