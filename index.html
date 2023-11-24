@@ -20,9 +20,12 @@
    importer.setUser({
        user_id: "Labor Distribution Report for PD"
    })
-  var dt = new Date(); 
+  var dateObject = new Date();
+  var year = dateObject.getYear();
+  var month = dateObject.getMonth();
+  var date = dateObject.getDate();
   importer.setOptions({
-    target_file_name: "Loop" + (new Date().getTime())
+    target_file_name: "Loop_" + year + "_"+ month
   })
 </script>
 
