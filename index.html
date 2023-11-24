@@ -1,6 +1,6 @@
 <html>
 <head>
-  <title>test</title>
+  <title>Loop CSV File uploader</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -18,8 +18,11 @@
    }
    let importer = new CSVBoxImporter("PaR955BTLtBdVDKdBQBCkp1wLmPX7l",{}, callback);
    importer.setUser({
-       user_id: 'default123'
+       user_id: 'Labor Distribution Report for PD'
    });
+  importer.setOptions({
+    target_file_name: {user_id}_{current_timestamp}
+});
 </script>
 
   
