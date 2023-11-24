@@ -38,12 +38,13 @@
     var year = dateObject.getFullYear();
     var month = dateObject.getMonth() + 1;
     var date = dateObject.getDate();
-    var hour = dateobject.getHours()
-    var min = dateobject.getMinutes()
-    var sec = dateobject.getSeconds()
+    var hour = dateobject.getHours();
+    var min = dateobject.getMinutes();
+    var sec = dateobject.getSeconds();
         
     importer.setOptions({
-    target_file_name: "Labor Distribution Report for PD "  + month + "-" + date + "-" + year + " " + hour + ":" + min + ":" + sec
+    target_file_name: "Labor Distribution Report for PD "  + month + "-" + date + "-" + year
+        // + " " + hour + ":" + min + ":" + sec
     })
         
     let importer2 = new CSVBoxImporter("7vT2u9UQb8gJIBkGOGH3vBOMl15DrP",{}, callback);
