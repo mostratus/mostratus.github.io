@@ -21,11 +21,11 @@
        user_id: "Labor Distribution Report for PD"
    })
   var dateObject = new Date();
-  var year = dateObject.getYear();
-  var month = dateObject.getMonth();
+  var year = dateObject.getFullYear();
+  var month = dateObject.getMonth()+;
   var date = dateObject.getDate();
   importer.setOptions({
-    target_file_name: "Loop_" + year + "_"+ month
+    target_file_name: "Loop_" + year + "-" + month + "-" + date
   })
 </script>
 
