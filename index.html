@@ -32,9 +32,10 @@
     target_file_name: "Labor Distribution Report for PD " + year + "-" + month + "-" + date
   })
 </script>
-  <br>
-  <p2>
-  <button class="btn btn-primary" data-csvbox disabled onclick="importer.openModal();" style="background-color: rgb(255,213,128); height: 50px; width: 200px"><strong>Import Payroll CSV</strong></button>
+  <br><br><br>
+
+
+<button class="btn btn-primary" data-csvbox disabled onclick="importer.openModal();">Import</button>
 <script type="text/javascript" src="https://js.csvbox.io/script.js"></script>
 <script type="text/javascript">
    function callback(result, data) {
@@ -45,21 +46,11 @@
            console.log("There was some problem uploading the sheet");
        }
    }
-   let importer = new CSVBoxImporter("PaR955BTLtBdVDKdBQBCkp1wLmPX7l",{}, callback);
+   let importer = new CSVBoxImporter("LclAg9oaHmH6pXgDWNO6TzmoSPFwqu",{}, callback);
    importer.setUser({
-        user_id: "Stratus",
-        team_id: "Loop Neighborhood",
-        email: "sanjit@loopneighborhood.com"
-    })
-  var dateObject = new Date();
-  var year = dateObject.getFullYear();
-  var month = dateObject.getMonth() + 1;
-  var date = dateObject.getDate();
-  importer.setOptions({
-    target_file_name: "Labor Distribution Report for PD " + year + "-" + month + "-" + date
-  })
+       user_id: 'default123'
+   });
 </script>
-    </p2>
 
   
 </body>
