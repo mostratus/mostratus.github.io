@@ -10,7 +10,7 @@
         <script>
         let text = "Please make sure to complete the 'File Upload,' 'Select Header Row,' 'Map Columns,' 'Verify Data,' and 'Submit' steps to successfully upload the file to the SFTP server.";
         let redcolored_text = text.fontcolor("red");
-        let redcolored_text = redcolored_text.fontWeight("bold");
+        redcolored_text = "<b>" + redcolored_text + "</b>";
         document.getElementById("body_text").innerHTML = redcolored_text;
         var bodyTextElement = document.getElementById("body_text");
         bodyTextElement.style.textAlign = 'center';
